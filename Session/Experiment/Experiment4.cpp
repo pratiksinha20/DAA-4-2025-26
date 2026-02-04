@@ -32,6 +32,14 @@ i = (i-1)/2;
 }
 
 
+int search(int key) {
+    for (int i = 0; i < heapSize; i++) {
+        if (heap[i] == key)
+            return i;
+    }
+    return -1;
+}
+
 
 void insert(int val) {
 if(heapSize == MAX) {
@@ -80,4 +88,5 @@ deleteAtIndex(2);
 for(int i =0;i<heapSize;i++) {
 cout<<heap[i]<< " ";
 }
+cout << "Search 9: Index = " << search(9) << endl;
 }
